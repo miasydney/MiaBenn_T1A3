@@ -19,9 +19,11 @@ puts Rainbow("███╗   ███╗██╗███╗   ██╗██
 ██║ ╚═╝ ██║██║██║ ╚████║██║    ╚██████╗██║   ██║      ██║
 ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝     ╚═════╝╚═╝   ╚═╝      ╚═╝
                                                            ").skyblue.blink
+puts Rainbow("                    PRODUCTIVITY TIMER \n").pink.bold
 puts Rainbow('_ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _').pink
-puts "\n" * 10
-
+puts "\n" * 3
+puts Rainbow('     COMPLETE STUDY BLOCKS AND POPULATE YOUR CITY').skyblue.bold
+puts "\n" * 5
 
 # data = File.read('src/users.json')
 
@@ -34,10 +36,10 @@ if new_user == true
   puts 'this is a new user'
   # sign up
 # what do you want your new username to be?
-username = prompt.ask("What do you want your username to be?").colorize(:light_cyan)
+username = prompt.ask("Please enter your new username:  ".colorize(:light_cyan))
 
 # please enter your password
-password = prompt.mask("Please enter your new password").colorize(:light_cyan)
+password = prompt.mask("Please enter your new password:  ".colorize(:light_cyan))
 
 # add username and password as a new hash to the JSON array of hashes
 
@@ -52,11 +54,21 @@ else
  # make that hash be the same hash that I get the city from and update the city with
 end
 
+puts "Success! You are logged in".colorize(:light_cyan)
+sleep 2
+
+puts "\n" * 35
 # you are logged in 
 # print city from user city value in JSON file
 
+puts Rainbow("   MY CITY: \n").pink.bold
+puts " 🏡 🌳 🏩 🌳 🌳  "
+puts "_ _ _ 🚗 _ _ _\n"
+puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE ITEMS\n AND POPULATE YOUR CITY. \n\n\n").pink.bold
+
 timer_menu
 
+puts "\n" * 35
 
 # writes the new data into the JSON file (you should do this at the end of the program)
 

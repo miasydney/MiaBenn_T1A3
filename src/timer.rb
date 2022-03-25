@@ -32,17 +32,15 @@ def timer_menu
             timer(15)
             # adds plant to their city
         when "B. 30 min"
-            puts "you selected 30 min"
+            puts "Starting 30 min study block"
             timer(30)
         when "C. 45 min"
-            puts "you selected 45 min"
+            puts "Starting 45 min study block"
             timer(40)
         when "D. 1hr"
-            puts "you selected 1 hour"
+            puts "Starting 1 hour study block"
             timer(40)
         else
-            puts "you didnt select 15 min"
+            puts "Invalid selection was made"
         end
 end
-
-timer_menu
