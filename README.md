@@ -2,7 +2,10 @@
 Note to self: keep all the screenshots that I include in this document in the docs folder.
 
 ## Full attribution to referenced sources (where applicable)
+Ascii art
+https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
 ## Link to source control repository: 
+(github)
 ## Identify any code style guide or styling conventions that the application will adhere to
 ## Reference the chosen style guide appropriately
 The style guide: https://rubystyle.guide/
