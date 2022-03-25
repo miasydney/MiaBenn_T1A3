@@ -32,6 +32,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     erubi (1.10.0)
+    facets (3.1.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     loofah (2.15.0)
@@ -107,6 +108,7 @@ PLATFORMS
 DEPENDENCIES
   colorize (~> 0.8.1)
   devise (~> 4.8)
+  facets (~> 3.1)
   rainbow (~> 3.1)
   rspec (~> 3.11)
   timer (~> 0.3.0)

@@ -15,3 +15,5 @@ gem "timer", "~> 0.3.0"
 gem "rainbow", "~> 3.1"
 
 gem "devise", "~> 4.8"
+
+gem "facets", "~> 3.1"
