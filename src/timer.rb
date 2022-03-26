@@ -16,7 +16,7 @@ t = s
 min, sec = t/60, t%60
 printf "\r%02d:%02d".colorize(:light_cyan), min, sec
 end
-puts "\n Well Done! Adding new item to your city..."
+puts "\n Well Done! Adding more coins to your wallet..."
 end
 
 # method to bring up timer menu with different time block options
@@ -29,19 +29,20 @@ def timer_menu
         when "A. 15 min"
             puts "Starting 15 min study block"
             timer(15)
-            # adds house to their city
-            # parsed[0][:city] << " 🌳 "
-            $coins += 5
+            $coins += 250
         when "B. 30 min"
             puts "Starting 30 min study block"
             timer(30)
             parsed[0][:city] << " 🏡 "
+            $coins += 500
         when "C. 45 min"
             puts "Starting 45 min study block"
             timer(45)
+            $coins += 750
         when "D. 1hr"
             puts "Starting 1 hour study block"
             timer(40)
+            $coins += 1000
         else
             # user_wants_to_continue == false
         end

@@ -51,25 +51,25 @@ puts "\n" * 35
 
 parsed = JSON.load_file('src/users.json', symbolize_names: true)
 $coins = parsed[1][:coins]
+$city = parsed[0][:city]
 
 def display_city
   puts Rainbow(" MY CITY: \n").pink.bold
   # print city from user city value in JSON file
   parsed = JSON.load_file('src/users.json', symbolize_names: true)
-  city = parsed[0][:city]
-  city.each do |item|
+  $city.each do |item|
     print item
   end
 
 
   puts "\n _ _ _ 🚗 _ _ _ _ 🚗 _ _ _\n"
   # prints user coins amount from coins value in JSON
-  puts "\n \n WALLET: #{$coins.to_s} coins"
+  puts Rainbow("\n \n WALLET: #{$coins.to_s} coins").pink
 
   puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE COINS\n AND POPULATE YOUR CITY. \n\n\n").pink.bold
 end
 
-puts Rainbow("WELCOME TO YOUR CITY \n \n \n").skyblue
+puts Rainbow(" welcome to your city! \n \n \n").skyblue.bold
 display_city
 
 # intial prompt for user to see if they want to continue

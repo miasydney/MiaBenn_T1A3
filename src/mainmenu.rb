@@ -5,20 +5,20 @@ answer = prompt.select('What would you like to do?'.colorize(:light_blue), ['A. 
 case answer
 when 'A. Buy a house for 500 coins'
   if $coins >= 500
-    puts 'you were able to buy a house'
-    # city << '🏡'
-    # $coins -= 500
+    $city << " 🏡🌴"
+    $coins -= 500
+    puts 'Adding new house to your city!'
   else
-    puts 'not enough funds'
+    puts 'Not enough funds. Start study block to earn more coins.'
     # return to home page
   end
 when 'B. Buy a hotel for 1000 coins'
   if $coins >= 1000
-    # city << '🏩'
-    # $coins -= 1000
-    puts 'you bought a hotel'
+    $city << ' 🌳🏩🌳'
+    $coins -= 1000
+    puts 'Adding new hotel to your city!'
   else
-    puts 'not enough funds'
+    puts 'Not enough funds. Start a study block to earn more coins.'
     # return to home page
   end
 when 'C. Start studying to make more coins'
