@@ -3,6 +3,4 @@
 def wallet
 coins_balance = 0
 
-
-
 end

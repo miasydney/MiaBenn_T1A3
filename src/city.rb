@@ -1,20 +1,23 @@
 # file with methods to display city, add houses or add hotels
+require 'json'
 
+
+class City
+  parsed = JSON.load_file('src/users.json', symbolize_names: true)
 
 def add_house
-  city << '🏡'
+  parsed[0][:city] << "🏡"
 end
 
 def add_hotel
-  city << '🏩'
+  parsed[0][:city] << "🏩"
   puts city
 end
 
 def display_city
-  puts city
+  puts parsed[0][:city]
 end
-
-
+end
 
 
 # include City

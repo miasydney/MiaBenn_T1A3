@@ -1,7 +1,8 @@
 # the app
-require_relative 'timer.rb'
+require_relative 'timer'
 require_relative 'city'
 require_relative 'wallet'
+require_relative 'banner'
 
 # gem things
 require 'tty-prompt'
@@ -10,66 +11,67 @@ require 'colorized_string'
 prompt = TTY::Prompt.new
 require 'rainbow'
 
-puts Rainbow("  \n \n                       WELCOME TO \n \n").pink.bold
-
-puts Rainbow("███╗   ███╗██╗███╗   ██╗██╗     ██████╗██╗████████╗██╗   ██╗
-████╗ ████║██║████╗  ██║██║    ██╔════╝██║╚══██╔══╝╚██╗ ██╔╝
-██╔████╔██║██║██╔██╗ ██║██║    ██║     ██║   ██║    ╚████╔╝
-██║╚██╔╝██║██║██║╚██╗██║██║    ██║     ██║   ██║     ╚██╔╝
-██║ ╚═╝ ██║██║██║ ╚████║██║    ╚██████╗██║   ██║      ██║
-╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝     ╚═════╝╚═╝   ╚═╝      ╚═╝
-                                                           ").skyblue.blink
-puts Rainbow("                    PRODUCTIVITY TIMER \n").pink.bold
-puts Rainbow('_ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _ _ _ 🚗 _ _').pink
-puts "\n" * 3
-puts Rainbow('     COMPLETE STUDY BLOCKS AND POPULATE YOUR CITY').skyblue.bold
-puts "\n" * 5
+# display opening screen
+display_banner
 
 # data = File.read('src/users.json')
 
-
-    require 'json'
+require 'json'
 # checks if they are a new user
 new_user = prompt.yes?('Are you a new user?'.colorize(:light_cyan))
 
 if new_user == true
-  puts 'this is a new user'
+  puts "Let's create an account!"
   # sign up
-# what do you want your new username to be?
-username = prompt.ask("Please enter your new username:  ".colorize(:light_cyan))
+  # what do you want your new username to be?
+  username = prompt.ask('Please enter your new username:  '.colorize(:light_cyan))
 
-# please enter your password
-password = prompt.mask("Please enter your new password:  ".colorize(:light_cyan))
+  # please enter your password
+  password = prompt.mask('Please enter your new password:  '.colorize(:light_cyan))
 
 # add username and password as a new hash to the JSON array of hashes
 
 else
-  puts 'this is an existing user'
+  puts 'Welcome Back!'
   # enter your username
-  usernameentry = prompt.ask("Enter your username").colorize(:light_cyan)
+  usernameentry = prompt.ask('Enter your username'.colorize(:light_cyan))
 
-  passwordentry = prompt.mask("Please enter your password").colorize(:light_cyan)
+  passwordentry = prompt.mask('Please enter your password'.colorize(:light_cyan))
   # enter your password
-  #iterate over list to see if there is a matching usernameentry and passwordentry in one of the hashes in JSON file
- # make that hash be the same hash that I get the city from and update the city with
+  # iterate over list to see if there is a matching usernameentry and passwordentry in one of the hashes in JSON file
+  # make that hash be the same hash that I get the city from and update the city with
 end
 
-puts "Success! You are logged in".colorize(:light_cyan)
+puts 'Success! You are logged in'.colorize(:light_cyan)
 sleep 2
 
 puts "\n" * 35
-# you are logged in 
-# print city from user city value in JSON file
 
+
+def display_city
 puts Rainbow("   MY CITY: \n").pink.bold
-puts " 🏡 🌳 🏩 🌳 🌳  "
+# print city from user city value in JSON file
+parsed = JSON.load_file('src/users.json', symbolize_names: true)
+puts parsed[0][:city]
 puts "_ _ _ 🚗 _ _ _\n"
-puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE ITEMS\n AND POPULATE YOUR CITY. \n\n\n").pink.bold
+puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE ITEMS AND\n POPULATE YOUR CITY. \n\n\n").pink.bold
+end
 
+display_city
+
+# intial prompt for user to see if they want to continue
+continue = prompt.yes?('Enter Y to continue or N to finish studying and exit the program'.colorize(:light_cyan))
+
+while continue == true
+# goes through timer menu options, completes study block and adds new item to city
+display_city
 timer_menu
-
+# simulates a 'new page' after timer menu is completed and new item is being added
+sleep 4
 puts "\n" * 35
+display_city
+continue = prompt.yes?('Enter Y to continue or N to finish studying and exit the program'.colorize(:light_cyan))
+end
 
-# writes the new data into the JSON file (you should do this at the end of the program)
-
-File.write('src/users.json', JSON.pretty_generate(parsed))
+# when continue != true, the program will end
+puts Rainbow('Bye! See you next time!').skyblue
