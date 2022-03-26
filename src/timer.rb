@@ -30,7 +30,8 @@ def timer_menu
             puts "Starting 15 min study block"
             timer(15)
             # adds house to their city
-            parsed[0][:city] << " 🌳 "
+            # parsed[0][:city] << " 🌳 "
+            $coins += 5
         when "B. 30 min"
             puts "Starting 30 min study block"
             timer(30)
