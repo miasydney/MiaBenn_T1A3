@@ -6,7 +6,7 @@ prompt = TTY::Prompt.new
 
 # require_relative 'main.rb'
 
-# method for timer. calculated in seconds, pass them in as a parameter
+# method for timer. calculated in seconds
 def timer(seconds=0, amount)
   while seconds.positive?
   sleep 1

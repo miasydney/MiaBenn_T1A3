@@ -42,4 +42,7 @@ You must include:
 - any system/hardware requirements
 - how to use any command line arguments made for the application
 
+In order to run this application on your machine, you will need to have Ruby installed. 
+You can check this by running the command 'ruby -v'.
 You will need to run ``bundle install`` to install all dependencies for this app.
+Dependencies (gems).
