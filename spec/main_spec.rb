@@ -8,7 +8,7 @@ describe City do
         expect(city).to eq(city)
     end
     it 'should be able to add a house' do
-        city = city.add_house
+        city.add_house
         expect(city.add_house).to eq(city)
     end
 end
