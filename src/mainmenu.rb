@@ -1,7 +1,8 @@
 
 def mainmenu
+parsed = JSON.load_file('src/users.json', symbolize_names: true)
 prompt = TTY::Prompt.new
-answer = prompt.select('What would you like to do?'.colorize(:light_blue), ['A. Buy a house for 500 coins', 'B. Buy a hotel for 1000 coins','C. Start studying to make more coins'])
+answer = prompt.select('What would you like to do?', ['A. Buy a house for 500 coins', 'B. Buy a hotel for 1000 coins','C. Start studying to make more coins'])
 case answer
 when 'A. Buy a house for 500 coins'
   if $coins >= 500
@@ -19,12 +20,11 @@ when 'B. Buy a hotel for 1000 coins'
     puts 'Adding new hotel to your city!'
   else
     puts 'Not enough funds. Start a study block to earn more coins.'
-    # return to home page
   end
 when 'C. Start studying to make more coins'
   timer_menu
-#   countdown
 else
-  puts 'something weird happened'
+  puts 'Invalid input'
 end
+File.write('src/users.json', JSON.generate(parsed))
 end
