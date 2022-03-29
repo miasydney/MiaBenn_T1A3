@@ -39,7 +39,7 @@ puts "\n" * 35
 city = City.new([])
 
 # # instantiate new coins
-coins = Coins.new(3)
+coins = Coins.new(100)
 
 # # main menu
 continue = true
@@ -80,7 +80,7 @@ continue = true
        sleep 2
     when 'C. Start studying to make more coins'
 
-#       # timer menu
+       # timer menu
       answer = prompt.select('How long is your study block?', ['A. 15 min', "B. 30 min", "C. 45 min", "D. 1hr"])
       case answer
         when 'A. 15 min'

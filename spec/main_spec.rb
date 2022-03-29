@@ -1,5 +1,5 @@
 require_relative '../src/main.rb'
-require_relative 
+require_relative '../src/classes.rb'
 require 'rspec'
 
 # city class and methods
