@@ -4,6 +4,7 @@ Note to self: keep all the screenshots that I include in this document in the do
 ## Full attribution to referenced sources (where applicable)
 Ascii art
 https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
+
 ## Link to source control repository: 
 (github)
 ## Identify any code style guide or styling conventions that the application will adhere to
@@ -11,7 +12,9 @@ https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
 The style guide: https://rubystyle.guide/
 I have used  Rubocop which is a formatter extension that is based on this style guide. 
 
-# R6 🏡
+# Purpose
+
+# R6 Features 🏡
 Develop a list of three features that will b included in the application, must include:
 -describe at least THREE features
 -describe each feature
@@ -21,7 +24,11 @@ Ensure they allow you to demonstrate your understanding of the following concept
 -loops and conditional control structures
 -error handling
 
+
+
 # R7
+I used Trello in order to develop my implementation plan. 
+
 Develop an implementation plan which:
 - outlines how each feature will be implemented and a checklist of tasks for each feature
 - prioritise the implementation of different features, or checklist items within a feature
@@ -46,3 +53,4 @@ In order to run this application on your machine, you will need to have Ruby ins
 You can check this by running the command 'ruby -v'.
 You will need to run ``bundle install`` to install all dependencies for this app.
 Dependencies (gems).
+ACCURATELY describe: steps to install the application; dependencies required by the application; system/hardware requirements; features of the application.

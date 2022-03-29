@@ -1,5 +1,3 @@
-# require 'colorize'
-# require 'colorized_string'
 require 'rainbow'
 
 def display_banner
