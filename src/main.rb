@@ -20,7 +20,15 @@ require_relative 'classes.rb'
 Intro.display_banner
 # check if they are a new user
 Intro.user_details
+begin
+puts "What is your name?"
+name = gets.chomp.upcase
+rescue NoInputError => e
+  puts e.message
+  sleep 1
+  system('clear')
 
+end
 
 # # simulate new page effect
 sleep 2
@@ -58,46 +66,47 @@ continue = true
         city.add_house
         coins.subtract(500)
         else
-            puts 'Insufficient funds! Start a study block to earn more coins'
-            sleep 2
+          puts 'Insufficient funds! Start a study block to earn more coins'
+          sleep(2)
         end
+
     when 'B. Buy a hotel for 1000 coins'
-        if coins.amount >= 1000
+      if coins.amount >= 1000
         city.add_hotel
         coins.subtract(1000)
         puts 'Adding new hotel to your city!'
-        else
+      else
         puts 'Insufficient funds! Start a study block to earn more coins'
-        end
-       sleep 2
+      end
+      sleep(2)
     when 'C. Start studying to make more coins'
 
        # timer menu
-      answer = prompt.select('How long is your study block?', ['A. 15 min', "B. 30 min", "C. 45 min", "D. 1hr"])
+      answer = prompt.select('How long is your study block?', ['A. 15 min', 'B. 30 min', 'C. 45 min', 'D. 1hr'])
       case answer
-        when 'A. 15 min'
-          puts 'Starting 15 min study block'
-          timer(15, 250)
-          coins.add(250)
-        when 'B. 30 min'
-          puts 'Starting 30 min study block'
-          timer(30, 500)
-          coins.add(500)
-        when 'C. 45 min'
-          puts 'Starting 45 min study block'
-          timer(45, 750)
-          coins.add(750)
-        when 'D. 1hr'
-          puts 'Starting 1 hour study block'
-          timer(40, 1000)
-          coins.add(1000)
-        else
-          puts 'Invalid input'
-       end
-    when 'D. Finish studying and exit the program'
-    continue = false
-    puts Rainbow("Bye #{name.downcase}! See you next time!").skyblue
-    else
+      when 'A. 15 min'
+        puts 'Starting 15 min study block'
+        timer(15, 250)
+        coins.add(250)
+      when 'B. 30 min'
+        puts 'Starting 30 min study block'
+        timer(30, 500)
+        coins.add(500)
+      when 'C. 45 min'
+        puts 'Starting 45 min study block'
+        timer(45, 750)
+        coins.add(750)
+      when 'D. 1hr'
+        puts 'Starting 1 hour study block'
+        timer(40, 1000)
+        coins.add(1000)
+      else
         puts 'Invalid input'
+      end
+    when 'D. Finish studying and exit the program'
+      continue = false
+      puts Rainbow("Bye #{name.downcase}! See you next time!").skyblue
+    else
+      puts 'Invalid input'
     end
 end

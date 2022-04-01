@@ -27,14 +27,7 @@ if new_user == true
 else
   puts 'Welcome Back!'
 end
-begin
-puts "What is your name?"
-name = gets.chomp.upcase
-rescue NoInputError => e
-  puts e.message
-  sleep 1
-  system('clear')
+
 
 end
-
 end
