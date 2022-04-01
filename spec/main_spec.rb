@@ -2,9 +2,9 @@ require_relative '../src/main.rb'
 require_relative '../src/classes.rb'
 require 'rspec'
 
-# city class and methods
+# testing for city class and key methods
 describe City do
-    it 'should return whats in the array' do
+    it 'should return whats passed in to the array as initial value' do
         city = City.new([])
         expect(city.cityarray).to eq([])
     end
@@ -18,7 +18,7 @@ describe City do
     end
 end
 
-# coins class and methods
+# testing for coins class and key methods
 describe Coins do
     it 'should be able to instantiate with an initial amount' do
         coins = Coins.new(30)
@@ -28,7 +28,7 @@ describe Coins do
         coins = Coins.new(100)
         expect(coins.add(250)).to eq(350)
     end
-    it 'should be able successfully to subtract coins from amount' do
+    it 'should be able to successfully to subtract coins from amount' do
         coins = Coins.new(100)
         expect(coins.subtract(50)).to eq(50)
     end

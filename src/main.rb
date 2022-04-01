@@ -8,7 +8,7 @@ require 'json'
 require 'rspec'
 
 # other files of app containing key methods
-require_relative 'banner'
+require_relative 'welcome.rb'
 require_relative 'timer.rb'
 require_relative 'classes.rb'
 
@@ -17,18 +17,10 @@ require_relative 'classes.rb'
 # MAIN PROGRAM.
 
 # display opening screen
-display_banner
-# checks if they are a new user
-new_user = prompt.yes?(Rainbow('Are you a new user?').skyblue)
-if new_user == true
-  puts "Welcome!"
-else
-  puts 'Welcome Back!'
-end
+Intro.display_banner
+# check if they are a new user
+Intro.user_details
 
-puts "What is your name?"
-name = gets.chomp.upcase
-# introduce error handling for input here
 
 # # simulate new page effect
 sleep 2
@@ -104,7 +96,7 @@ continue = true
        end
     when 'D. Finish studying and exit the program'
     continue = false
-    puts Rainbow("Bye! See you next time!").skyblue
+    puts Rainbow("Bye #{name.downcase}! See you next time!").skyblue
     else
         puts 'Invalid input'
     end

@@ -1,4 +1,7 @@
+# User class
+class User
 
+end
 
 # City class
 class City
