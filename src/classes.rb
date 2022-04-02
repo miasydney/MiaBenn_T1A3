@@ -1,29 +1,25 @@
-# User class
-class User
-
-end
-
 # City class
 class City
-    attr_accessor :cityarray
-    # allows you to pass in initial city value on creation
-    def initialize(cityarray)
-        @cityarray = cityarray
-    end
+  attr_accessor :cityarray
 
-    def display_city
-        @cityarray.each do |item|
-        print item
-        end
-    end
+  # allows you to pass in initial city value on creation
+  def initialize(cityarray)
+    @cityarray = cityarray
+  end
 
-    def add_house
-        @cityarray << " 🏡🌳"
+  def display_city
+    @cityarray.each do |item|
+    print item
     end
+  end
 
-    def add_hotel
-        @cityarray << " 🌳🏩🌳"
-    end
+  def add_house
+    @cityarray << ' 🏡🌳'
+  end
+
+  def add_hotel
+    @cityarray << ' 🌳🏩🌳'
+  end
 end
 
 # coins class
