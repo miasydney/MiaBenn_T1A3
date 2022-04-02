@@ -15,35 +15,29 @@ Option to make more coins by completing a study period - 'start a study block to
 Option to exit the program - 'finish studying and exit the application'. 
 The options to purchase a house or hotel will both interact with the users city and coins balance, to either subtract the appropriate amount of coins and add a house or hotel to the city and then reload the menu so the user will be able to see their city updated OR reprompt the user for which option they would like to select if their coins balance is not sufficient to purchase their chosen selection. 
 Finish studying and exit the application will always be an option for the user if they do not want to utilise the application anymore. It will cleanly exit and display a goodbye message to confirm to the user that the option has worked and the program has  finished running.
-- A timer menu that is nested within the main menu options that allows a user to complete study periods. It brings up four options: 15m, 30m, 45m, 1h. Depending which of these options the user selects, a countdown timer will come up in the terminal that will count down for the specified amount of time. The user will make more coins the londer the study block is, and this amount will update to their balance when the period is completed. 
+- A timer menu that is nested within the main menu options that allows a user to complete study periods. It brings up four options: 15m, 30m, 45m, 1h. Depending which of these options the user selects, a countdown timer will come up in the terminal that will count down for the specified amount of time. The user will make more coins the longer the study block is, and this amount will update to their balance when the period is completed. 
 
-## Full attribution to referenced sources (where applicable)
-Ascii art
+## Utilised sources:
+Ascii art generator was used in order to 
 https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
 
 ## Link to source control repository: 
-(github)
-## Identify any code style guide or styling conventions that the application will adhere to
-## Reference the chosen style guide appropriately
-The style guide: https://rubystyle.guide/
+[Github](https://github.com/miasydney/MiaBenn_T1A3)
+
+## Code style guide and conventions that the application adheres to:
+The style guide I have used can be found in more detail at : https://rubystyle.guide/
 I have used  Rubocop which is a formatter extension that is based on this style guide. 
 
-# Purpose
-
 # R7
-I used Trello in order to develop my implementation plan. This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. 
-Develop an implementation plan which:
+I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
+![trello screenshot](../MiaBenn_T1A3/docs/trello1.png)
+![trello screenshot](../MiaBenn_T1A3/docs/trello2.png)
+![trello screenshot](../MiaBenn_T1A3/docs/trello3.png)
+![trello screenshot](../MiaBenn_T1A3/docs/trello4.png)
+![trello screenshot](../MiaBenn_T1A3/docs/trello5.png)
+![trello screenshot](../MiaBenn_T1A3/docs/trello6.png)
 
-- outlines how each feature will be implemented and a checklist of tasks for each feature
-- prioritise the implementation of different features, or checklist items within a feature
-- provide a deadline, duration or other time indicator for each feature or checklist/checklist-item
-
-Provide screenshots/images and/or a reference to an accessible project management platform used to track this implementation plan. 
-
-(Your checklists for each feature should have at least 5 items.)
-
-# R8
-Design help documentation which includes a set of instructions which accurately describe how to use and install the application.
+# R8 How to use and install the application.
 
 You must include:
 - steps to install the application
@@ -55,3 +49,7 @@ In order to run this application on your machine, you will need to have Ruby ins
 You will need to run ``bundle install`` to install all dependencies for this app.
 Dependencies (gems).
 ACCURATELY describe: steps to install the application; dependencies required by the application; system/hardware requirements; features of the application.
+
+When using the application, users will be prompted for both text input and multiselect menus. 
+Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 
+Multiselect menus: Users can use the up/down arrow keys to navigate to different options in this menu and hit enter to confirm and submit their selection.
