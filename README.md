@@ -66,3 +66,5 @@ The application includes some ARGV commands.
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 
 Multiselect menus: Users can use the up/down arrow keys to navigate to different options in this menu and hit enter to confirm and submit their selection.
+
+Although it is not recommended, if for some reason the user needs to exit the app whilst a timer is still running, they can do so by entering 'ctrl + C', which will forcefully exit the program. 
