@@ -59,7 +59,7 @@ The standard mac terminal
 
 - how to use any command line arguments made for the application
 
-## Usage
+## Installation and Usage
 
 In order to run the application, you can run the bash script which will automatically execute the file. To successfully run the app, you will need to be in the src directory. You can then run the command `./run_app.sh`. This should install the required dependencies and run the file for you.
 
