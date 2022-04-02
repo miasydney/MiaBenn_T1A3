@@ -28,7 +28,7 @@ https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
 The style guide I have used can be found in more detail at : https://rubystyle.guide/
 I have used  Rubocop which is a formatter extension that is based on this style guide. 
 
-# R7
+# Implementation plan
 I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
 ![trello screenshot](../MiaBenn_T1A3/docs/trello1.png)
 ![trello screenshot](../MiaBenn_T1A3/docs/trello2.png)
