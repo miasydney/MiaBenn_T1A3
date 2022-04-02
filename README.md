@@ -42,7 +42,9 @@ I used Trello in order to develop my implementation plan (https://trello.com/en)
 The application can be installed by
 - any dependencies required by the application to operate
 In order to run this application on your machine, you will need to have Ruby installed. You can check this by running the command 'ruby -v'. You will need to run ``bundle install`` to install all dependencies for this app.
+
 Gems:
+
 gem "tty-prompt", "~> 0.23.1"
 
 gem "colorize", "~> 0.8.1"
