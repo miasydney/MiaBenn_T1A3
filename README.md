@@ -1,5 +1,4 @@
 # Project Documentation
-Note to self: keep all the screenshots that I include in this document in the docs folder.
 
 ## About, Scope + Features
 Mini City is a terminal command line application built using Ruby. The purpose of this app is to help students or working professionals to stay motivated and focused while sitting through study periods. It aims to increase productivity by creating a gamified study timer. Mini City allows for users to select a set study block, it will then bring up a countdown timer that will display in the terminal and count down how many seconds they have left until the study block is complete. On successful completion of a study period, the user will be awarded with 'coins' that will be added to their coins balance. This is an interactive balance that will update as the user uses the application as they are allowed to complete an unlimited amount of study periods and therefore amass an unlimited amount of coins! They can then use these coins to purchase houses and hotels that will display in the terminal as 'their city' and build a collection as they complete their study/work. 
@@ -30,25 +29,33 @@ I have used  Rubocop which is a formatter extension that is based on this style 
 
 # Implementation plan
 I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
-<!-- ![trello screenshot](docs/trello1.png)
+![trello screenshot](docs/trello1.png)
 ![trello screenshot](docs/trello2.png)
 ![trello screenshot](docs/trello3.png)
 ![trello screenshot](docs/trello4.png)
 ![trello screenshot](docs/trello5.png)
-![trello screenshot](docs/trello6.png) -->
+![trello screenshot](docs/trello6.png)
 
 # R8 How to use and install the application.
 
-You must include:
 - steps to install the application
+The application can be installed by
 - any dependencies required by the application to operate
-- any system/hardware requirements
-- how to use any command line arguments made for the application
+In order to run this application on your machine, you will need to have Ruby installed. You can check this by running the command 'ruby -v'. You will need to run ``bundle install`` to install all dependencies for this app.
+Gems:
+gem "tty-prompt", "~> 0.23.1"
 
-In order to run this application on your machine, you will need to have Ruby installed. You can check this by running the command 'ruby -v'.
-You will need to run ``bundle install`` to install all dependencies for this app.
-Dependencies (gems).
-ACCURATELY describe: steps to install the application; dependencies required by the application; system/hardware requirements; features of the application.
+gem "colorize", "~> 0.8.1"
+
+gem "timer", "~> 0.3.0"
+
+gem "rainbow", "~> 3.1"
+
+- any system/hardware requirements
+
+The standard mac terminal 
+
+- how to use any command line arguments made for the application
 
 ## Usage
 
