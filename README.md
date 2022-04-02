@@ -61,7 +61,12 @@ The standard mac terminal
 
 ## Usage
 
-The application includes some ARGV commands. 
+In order to run the application, you can run the bash script which will automatically execute the file. To successfully run the app, you will need to be in the src directory. You can then run the command `./run_app.sh`. This should install the required dependencies and run the file for you.
+
+### Command Line Arguments
+The application includes some ARGV commands (command line arguments).
+These can be used by running the app file `ruby main.rb` in the terminal (NOT the bash script). Simply enter in the argument you'd like after the file name.
+Eg `ruby main.rb [argument]`
 
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 

@@ -50,7 +50,7 @@ while continue == true
   city.display_city
   puts "\n _ _ _ 🚗 _ _ _ _ 🚗 _ _ _\n"
   puts "\n" * 3
-  puts Rainbow('COINS:').skyblye.bold
+  puts Rainbow('COINS:').skyblue.bold
   coins.show_balance
   puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE COINS\n AND POPULATE YOUR CITY. \n\n").pink.bold
   # main menu selections
