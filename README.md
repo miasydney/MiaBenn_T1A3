@@ -1,6 +1,15 @@
 # Project Documentation
 Note to self: keep all the screenshots that I include in this document in the docs folder.
 
+## About, Scope + Features
+Mini City is a terminal command line application built using Ruby. The purpose of this app is to help students or working professionals to stay motivated and focused while sitting through study periods. It aims to increase productivity by creating a gamified study timer. Mini City allows for users to select a set study block, it will then bring up a countdown timer that will display in the terminal and count down how many seconds they have left until the study block is complete. On successful completion of a study period, the user will be awarded with 'coins' that will be added to their coins balance. This is an interactive balance that will update as the user uses the application as they are allowed to complete an unlimited amount of study periods and therefore amass an unlimited amount of coins! They can then use these coins to purchase houses and hotels that will display in the terminal as 'their city' and build a collection as they complete their study/work. 
+
+## Features (in more detail)
+- Engaging welcome banner featuring colours and effects created using ruby 'Rainbow' gem.
+- Personalised experience using users name. Upon opening the application, the user will be prompted for their first name. The application then uses error handling in order to ensure that they have entered a valid input that can be used later in the application to create a personalised experience. It will display their city with the heading "NAME'S CITY:". Eg "TOBY'S CITY:". Their name is also used upon exiting the application to display a personalised goodbye message that uses their name. This allows for the user to feel more welcome in the app, as it has been personalised specifically for them. If they want to screenshot their city or share it in anyway, it will show their name here, making it more fun and rewarding for them to show off. 
+- Main display for the application which shows the user their city and coins balance. 
+- Opening menu which allows four options: purchase a house for 500 coins, purchase a hotel for 1000 coins, start a study block to earn more coins or quit studying and exit the application. 
+
 ## Full attribution to referenced sources (where applicable)
 Ascii art
 https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city

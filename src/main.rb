@@ -8,11 +8,11 @@ require 'json'
 require 'rspec'
 
 # other files of app containing key methods
-require_relative 'welcome.rb'
-require_relative 'timer.rb'
-require_relative 'classes.rb'
+require_relative 'welcome'
+require_relative 'timer'
+require_relative 'classes'
 
-#ARGV arguments here for -h and --help, -a and --about
+# ARGV arguments here for -h and --help, -a and --about
 
 # MAIN PROGRAM.
 
@@ -21,19 +21,17 @@ Intro.display_banner
 # check if they are a new user
 Intro.user_details
 begin
-puts "What is your name?"
+puts 'What is your name?'
 name = gets.chomp.upcase
 rescue NoInputError => e
   puts e.message
   sleep 1
   system('clear')
-
 end
 
 # # simulate new page effect
 sleep 2
 puts "\n" * 35
-
 
 # # instantiate new city
 city = City.new([])
@@ -44,18 +42,16 @@ coins = Coins.new(100)
 # # main menu
 continue = true
     while continue == true
-    
+
     # display city + coins
     puts "\n" * 35
     puts "#{name}'S CITY: \n"
     city.display_city
-      puts "\n _ _ _ 🚗 _ _ _ _ 🚗 _ _ _\n"
+    puts "\n _ _ _ 🚗 _ _ _ _ 🚗 _ _ _\n"
     puts "\n" * 3
-    puts "COINS:"
+    puts 'COINS:'
     coins.show_balance
     puts Rainbow("\n \n START A STUDY BLOCK NOW\n TO EARN MORE COINS\n AND POPULATE YOUR CITY. \n\n").pink.bold
-    
-    
     # main menu selections
     answer = prompt.select('What would you like to do?', ['A. Buy a house for 500 coins', 'B. Buy a hotel for 1000 coins','C. Start studying to make more coins', 'D. Finish studying and exit the program'])
     case answer
@@ -81,7 +77,7 @@ continue = true
       sleep(2)
     when 'C. Start studying to make more coins'
 
-       # timer menu
+      # timer menu
       answer = prompt.select('How long is your study block?', ['A. 15 min', 'B. 30 min', 'C. 45 min', 'D. 1hr'])
       case answer
       when 'A. 15 min'
@@ -109,4 +105,4 @@ continue = true
     else
       puts 'Invalid input'
     end
-end
+    end
