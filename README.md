@@ -30,12 +30,12 @@ I have used  Rubocop which is a formatter extension that is based on this style 
 
 # Implementation plan
 I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
-![trello screenshot](docs/trello1.png)
+<!-- ![trello screenshot](docs/trello1.png)
 ![trello screenshot](docs/trello2.png)
 ![trello screenshot](docs/trello3.png)
 ![trello screenshot](docs/trello4.png)
 ![trello screenshot](docs/trello5.png)
-![trello screenshot](docs/trello6.png)
+![trello screenshot](docs/trello6.png) -->
 
 # R8 How to use and install the application.
 
@@ -49,6 +49,10 @@ In order to run this application on your machine, you will need to have Ruby ins
 You will need to run ``bundle install`` to install all dependencies for this app.
 Dependencies (gems).
 ACCURATELY describe: steps to install the application; dependencies required by the application; system/hardware requirements; features of the application.
+
+## Usage
+
+The application includes some ARGV commands. 
 
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 
