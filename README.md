@@ -69,6 +69,12 @@ The application includes some ARGV commands (command line arguments).
 These can be used by running the app file `ruby main.rb` in the terminal (NOT the bash script). Simply enter in the argument you'd like after the file name.
 Eg `ruby main.rb 'argument'`
 
+`--h` or `--help`
+Will display help documentation written for the application including what the app does, how to run and use the app, navigating through prompts and exiting the app. 
+
+`--a` or `--about`
+Will display information about the purpose, scope and features of the application.
+
 ### Prompts
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 

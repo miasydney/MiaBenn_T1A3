@@ -15,13 +15,12 @@ require_relative 'classes'
 # ARGV command line arguments here for -h and --help, -a and --about
 
 arguments = ARGV
-case
-when (arguments & ['--h', '--help']).any?
+if (arguments & ['--h', '--help']).any?
   File.foreach('./src/help.txt') do |line|
     puts line
   end
   exit
-when (arguments & ['--a', '--about']).any?
+elsif (arguments & ['--a', '--about']).any?
   File.foreach('./src/about.txt') do |line|
     puts line
   end
