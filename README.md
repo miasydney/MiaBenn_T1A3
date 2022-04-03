@@ -17,8 +17,7 @@ Finish studying and exit the application will always be an option for the user i
 - A timer menu that is nested within the main menu options that allows a user to complete study periods. It brings up four options: 15m, 30m, 45m, 1h. Depending which of these options the user selects, a countdown timer will come up in the terminal that will count down for the specified amount of time. The user will make more coins the longer the study block is, and this amount will update to their balance when the period is completed. 
 
 ## Utilised sources:
-Ascii art generator was used in order to 
-https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
+Ascii art generator was used in order to create a welcome heading. This site can be accessed at: https://patorjk.com/software/taag/#p=display&h=0&v=2&f=Double&t=mini%20city
 
 ## Link to source control repository: 
 [Github](https://github.com/miasydney/MiaBenn_T1A3)
@@ -54,8 +53,9 @@ gem "timer", "~> 0.3.0"
 gem "rainbow", "~> 3.1"
 
 - any system/hardware requirements
+For best experience, the application should be run in the terminal. It will run on most modern operating systems. 
 
-The standard mac terminal 
+The standard mac terminal settings have been used as the GUI for developing the application. It is recommended to use a font size of around 14pts for best experience. 
 
 - how to use any command line arguments made for the application
 
@@ -68,8 +68,9 @@ The application includes some ARGV commands (command line arguments).
 These can be used by running the app file `ruby main.rb` in the terminal (NOT the bash script). Simply enter in the argument you'd like after the file name.
 Eg `ruby main.rb [argument]`
 
+### Prompts
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 
 Multiselect menus: Users can use the up/down arrow keys to navigate to different options in this menu and hit enter to confirm and submit their selection.
 
-Although it is not recommended, if for some reason the user needs to exit the app whilst a timer is still running, they can do so by entering 'ctrl + C', which will forcefully exit the program. 
+Although it is not recommended, if for some reason the user needs to exit the app whilst a study block timer is still running, they can do so by entering 'ctrl + C', which will forcefully exit the program. 
