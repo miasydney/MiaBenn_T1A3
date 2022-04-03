@@ -1,6 +1,6 @@
 require 'rainbow'
 require_relative '../src/errors.rb'
-
+# Intro module
 module Intro
 def self.display_banner
 puts Rainbow("  \n \n                       WELCOME TO \n \n").pink.bold
@@ -23,7 +23,7 @@ def self.user_details
 prompt = TTY::Prompt.new
 new_user = prompt.yes?(Rainbow('Are you a new user?').skyblue)
 if new_user == true
-  puts "Welcome!"
+  puts 'Welcome!'
 else
   puts 'Welcome Back!'
 end
