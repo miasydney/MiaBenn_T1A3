@@ -1,4 +1,3 @@
-
 # gem requirements + set up
 require 'tty-prompt'
 prompt = TTY::Prompt.new
@@ -13,7 +12,21 @@ require_relative 'welcome'
 require_relative 'timer'
 require_relative 'classes'
 
-# ARGV arguments here for -h and --help, -a and --about
+# ARGV command line arguments here for -h and --help, -a and --about
+
+arguments = ARGV
+case
+when (arguments & ['--h', '--help']).any?
+  File.foreach('./src/help.txt') do |line|
+    puts line
+  end
+  exit
+when (arguments & ['--a', '--about']).any?
+  File.foreach('./src/about.txt') do |line|
+    puts line
+  end
+  exit
+end
 
 # MAIN PROGRAM.
 
@@ -21,14 +34,14 @@ require_relative 'classes'
 Intro.display_banner
 # check if they are a new user
 Intro.user_details
-begin
+# begin
 puts 'What is your name?'
 name = gets.chomp.upcase
-rescue NoInputError => e
-  puts e.message
-  sleep 1
-  system('clear')
-end
+# rescue NoInputError => e
+#   puts e.message
+#   sleep 1
+#   system('clear')
+# end
 
 # # simulate new page effect
 sleep 2

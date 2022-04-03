@@ -1,0 +1,20 @@
+----------- HELP DOCUMENTATION -----------
+
+Mini City is a productivity timer application built to help you stay motivated and focused while sitting through study periods. It allows you to build a collection of houses and hotels in your terminal that you can purchase with coins that you earn by successfully completing study periods.
+
+CITY: displays your current collection of houses and hotels.
+COINS: displays your current coins balance. You can use these coins to purchase new houses and hotels if your balance is sufficient.
+
+When you begin a study period, a countdown timer will appear in your terminal and count down the appropriate amount of time until you have completed the period. Coins will then be added to your balance upon completion. You are able to complete as many study periods as you wish.
+
+------------Running the file:------------
+In order to run the application, you can run the bash script which will automatically execute the file. 
+To successfully run this script, you will need to be in the src directory. You can then run the command `./run_app.sh`. This should install the required dependencies and run the file for you.
+
+------------Prompts:------------
+When using the application, you will be prompted for both text input and multiselect menus. 
+Text input: You can type in your answers to prompts in the command line and hit enter to submit your response. 
+Multiselect menus: Users can use the up/down arrow keys to navigate to different options in this menu and hit enter to confirm and submit their selection.
+
+------------Quitting the application early:------------
+Although it is not recommended, if for some reason you need to exit the app whilst a study block timer is still running, you can do so by entering 'ctrl + C', which will forcefully exit the program. The progress of your timer will not be saved however.
