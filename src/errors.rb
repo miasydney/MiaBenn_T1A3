@@ -1,6 +1,6 @@
 class NoInputError < StandardError
     def message
-        puts "Please enter a name!"
+    puts "Name must not be empty"
     end
 end
 

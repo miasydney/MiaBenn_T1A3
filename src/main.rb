@@ -33,16 +33,20 @@ end
 Intro.display_banner
 # check if they are a new user
 Intro.user_details
-# begin
+
+start = false
+while start == false
 puts 'What is your name?'
 name = gets.chomp.upcase
-# rescue NoInputError => e
-#   puts e.message
-#   sleep 1
-#   system('clear')
-# end
+# error handling for name string input
+if name.empty?
+  puts 'Name field cannot be empty. Please re-enter a name'
+else
+  start = true
+end
+end
 
-# # simulate new page effect
+# simulate new page effect
 sleep 2
 puts "\n" * 35
 

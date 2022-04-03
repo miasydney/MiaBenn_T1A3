@@ -28,7 +28,7 @@ I have used  Rubocop which is a formatter extension that is based on this style 
 
 # Implementation plan
 
-I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
+I used Trello in order to develop my implementation plan (https://trello.com/en  - https://trello.com/b/TwHlTknM/t1a3). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
 ![trello screenshot](docs/trello1.png)
 ![trello screenshot](docs/trello2.png)
 ![trello screenshot](docs/trello3.png)

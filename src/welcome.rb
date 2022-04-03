@@ -27,7 +27,5 @@ if new_user == true
 else
   puts 'Welcome Back!'
 end
-
-
 end
 end
