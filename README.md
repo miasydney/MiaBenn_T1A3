@@ -27,6 +27,7 @@ The style guide I have used can be found in more detail at : https://rubystyle.g
 I have used  Rubocop which is a formatter extension that is based on this style guide. 
 
 # Implementation plan
+
 I used Trello in order to develop my implementation plan (https://trello.com/en). This is a popular project management system. My tasks were structured according to user stories, using Kanban style boards to utilise agile development to track my progress with creating the features. Here are some screenshots of the implementation plan in action:
 ![trello screenshot](docs/trello1.png)
 ![trello screenshot](docs/trello2.png)
@@ -35,14 +36,17 @@ I used Trello in order to develop my implementation plan (https://trello.com/en)
 ![trello screenshot](docs/trello5.png)
 ![trello screenshot](docs/trello6.png)
 
-# R8 How to use and install the application.
 
-- steps to install the application
-The application can be installed by
-- any dependencies required by the application to operate
+## Installation
+
+In order to run the application, you can run the bash script which will automatically execute the file. 
+To successfully run this script, you will need to be in the src directory. You can then run the command `./run_app.sh`. This should install the required dependencies and run the file for you.
+
+## System/hardware requirements + dependencies
+
 In order to run this application on your machine, you will need to have Ruby installed. You can check this by running the command 'ruby -v'. You will need to run ``bundle install`` to install all dependencies for this app.
 
-Gems:
+This app is dependent on the following Ruby Gems to operate:
 
 gem "tty-prompt", "~> 0.23.1"
 
@@ -52,19 +56,10 @@ gem "timer", "~> 0.3.0"
 
 gem "rainbow", "~> 3.1"
 
-- any system/hardware requirements
-For best experience, the application should be run in the terminal. It will run on most modern operating systems. 
-
-The standard mac terminal settings have been used as the GUI for developing the application. It is recommended to use a font size of around 14pts for best experience. 
-
-- how to use any command line arguments made for the application
-
-## Installation and Usage
-
-In order to run the application, you can run the bash script which will automatically execute the file. 
-To successfully run this script, you will need to be in the src directory. You can then run the command `./run_app.sh`. This should install the required dependencies and run the file for you.
+For best experience, the application should be run in the terminal. It will run on most modern operating systems. The standard mac terminal settings have been used as the GUI for developing the application. It is recommended to use a font size of around 14pts for best experience. 
 
 ### Command Line Arguments
+
 The application includes some ARGV commands (command line arguments).
 These can be used by running the app file `ruby main.rb` in the terminal (NOT the bash script). Simply enter in the argument you'd like after the file name.
 Eg `ruby main.rb 'argument'`
@@ -76,6 +71,7 @@ Will display help documentation written for the application including what the a
 Will display information about the purpose, scope and features of the application.
 
 ### Prompts
+
 When using the application, users will be prompted for both text input and multiselect menus. 
 Text input: Users can type in their answers to prompts in the command line and hit enter to submit the response. 
 Multiselect menus: Users can use the up/down arrow keys to navigate to different options in this menu and hit enter to confirm and submit their selection.
